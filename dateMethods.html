@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="date" id="dateinput" onchange="f1()">
+    <p id = "output"></p>
+    </div>
+    
+    <script>
+
+
+        dt= new Date();
+        document.write(dt.getFullYear());
+        document.write("<Br/>")
+        document.write(dt.getDay());
+        document.write("<Br/>")
+        document.write(dt.getMonth()+1);
+        document.write("<Br/>")
+        document.write(Date.now());
+        document.write("<Br/>")
+        days= ["sunday", "monday", "tuesday","wednesday" , "thursday", "Friday", "Saturday"]
+        document.write(days[dt.getDay()])
+
+        document.write("<Br/>")
+
+
+        // document.write(dt);
+        document.write("<Br/>")
+        dt.setFullYear(2023)
+        document.write(dt);
+        document.write("<Br/>")
+        dt.setFullYear(2025,10,12)
+        document.write(dt)
+
+        document.write("<Br/>")
+        day1= new Date()
+        day2= new Date()
+        day2.setFullYear(2023,10,12)
+        if(day1>day2){
+            text ="Welcome to my paradaise"
+        }
+        else{
+            text = "you are late sir"
+        }
+
+        document.write("<h1>", text, "</h1>")
+        document.write("<Br/>")
+
+        function f1(){
+            dt = new Date(document.getElementById("dateinput").value)
+
+            // document.getElementById("dateInput") selects the <input> element with the id="dateInput".
+            // .value extracts the value from this input field.
+
+            day11 = new Date()
+        day22 = new Date()
+        day11.setFullYear(2025,0,22)
+        
+        day22.setFullYear(2025,0,29)
+        let text;
+
+        if(dt>=day11 && dt<=day22){
+            text="you are on time"
+        }
+        else{
+            text="you are late";
+
+        }
+        document.getElementById("output").innerText=text;
+        }
+    
+    </script>
+</body>
+</html>
