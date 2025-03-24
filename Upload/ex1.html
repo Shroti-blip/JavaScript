@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+
+    <script>
+        function f1(){
+        clor_arr = new Array("#FFFF80","#00FF80","#008040","#FF8000")
+        text1= new Array("HTML stands for Hyper Text Markup Language","CSS stands for Cascading Style Sheet","JS stands for Javascript","PHP stands for Pre Hypertext Processor");
+       // let s = document.getElementById("s");
+        switch(s.selectedIndex){
+            case 0: document.getElementById("display").style.backgroundColor =clor_arr[0];
+            document.getElementById("display").style.textAlign = "center";
+            document.getElementById("display").innerHTML = "<p>"+text1[0]+"</p>"
+            break;
+            case 1:
+                document.getElementById("display").style.backgroundColor = clor_arr[1];
+                document.getElementById("display").style.textAlign = "left";
+                document.getElementById("display").innerHTML = "<p>" + text1[1]+ "</p>";
+                break;
+
+                case 2 : document.getElementById("display").style.backgroundColor=clor_arr[2];
+                 document.getElementById("display").style.textAlign = "right";
+                 document.getElementById("display").innerHTML ="<p>"+text1[2]+"</p>";
+                 break;
+        case 3 : document.getElementById("display").style.backgroundColor=clor_arr[3];
+                 document.getElementById("display").style.textAlign = "justify";
+                 document.getElementById("display").innerHTML ="<p>"+text1[3]+"</p>";
+                 alert (s.value);
+                 break;
+        }
+    }
+    </script>
+</head>
+<body>
+    
+    <select name="s" id="s">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="js">JS</option>
+        <option value="php">php</option>
+    </select>
+
+    <div id="display"></div>
+    <input type="button" value="ok" onclick="f1() ; alert('check this out');">
+    
+
+    
+</body>
+</html>
