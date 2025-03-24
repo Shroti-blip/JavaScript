@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function f1(){
+            text1 =""; 
+            let q = document.getElementsByName("q")
+            for(let  i =0; i<=4; i++){
+                if(q[i].checked){
+                    text1 += q[i].value;
+                }
+            }
+            document.getElementById("p1").innerHTML = "your Features are : " +text1;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Bank Account Features</h1>
+
+    <label for="">Type of features for your bank Account</label>
+
+    <input type="checkbox" name="q" value="E-statements">E-statements
+    <input type="checkbox" name="q" value="Mobile Banking">Mobile Banking
+    <input type="checkbox" name="q" value="Passbook">Passbook
+    <input type="checkbox" name="q" value="Debit card">Debit card
+    <input type="checkbox" name="q" value="Cheque Book">Cheque Book
+
+    <input type="button" onclick="f1()" value="Confirm your Features">
+    <p id="p1"></p>
+
+
+
+
+   
+</body>
+
+</html>
