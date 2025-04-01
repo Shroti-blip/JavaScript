@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<h1>ForEach Loop Js</h1>
+<p>Calls a function once for each array element.</p>
+<p id="p1"></p>
+<script>
+   const number1 = [34,434,2,23,11,75]
+   let text = ""
+   number1.forEach(myFunction);
+   document.getElementById("p1").innerHTML= text
+   function myFunction(value){
+    text +=value + "<br>";
+   }
+</script>
+
+<h1>JavaScript TypeOf</h1>
+<pre>
+    5 different kind of datatypes that can contain values.
+
+    String 
+    Boolean
+    Number
+    function
+    object
+    There are 6 types of objects:
+
+    Object
+    Date
+    Array
+    string
+    Number
+    Boolean
+    And 2 data types that cannot contain values:
+
+    null
+    undefined
+</pre>
+
+<h2>The js typeof Operator</h2>
+<p>The typeof returns the typeof variable, object, function , expression</p>
+
+<p id="p2"></p>
+
+<script>
+    document.getElementById("p2").innerHTML = 
+    typeof "" + "<br>"+
+    typeof 3.12 +"<br>"+ 
+    typeof true +"<br>"+
+    typeof NaN +"<br>"+ 
+    typeof [1,2,35,5,4] +"<br>" +
+    typeof {name:'hola', age:34} +"<br>"+
+    typeof new Date()+"<br>"+
+    typeof function (){}+"<br>"+
+    typeof mycar +"<br>"+typeof null;
+    
+</script>
+
+<p id="p4"></p>
+
+<script>
+    document.getElementById("p4").innerHTML = 
+    typeof {name:'hojl'} + "<br>"+ 
+    typeof null + "<br>"
+    
+</script>
+
+<p id = "p5"></p>
+
+<script>
+    const person = {name:'hojl' , age:12, lname:'holkddfsdfsd'}
+    let txt = "";
+    for(let i in person){
+        txt +=person[x] + " ";
+    }
+    document.getElementById("p5").innerHTML = txt 
+
+</script>
+
+<h2>JavaScript For In</h2>
+<p>The for in statement can loops over array values:</p>
+
+<p id="p6"></p>
+
+
+<script>
+    const number = [34,343,343,232,6,90]
+    // txt = new Number;
+    txt = 0;
+    for(let x in number){
+        txt += parseInt(numbers[x]) + "<br>"
+    }
+    
+document.getElementById("p6").innerHTML = txt;
+</script>
+</body>
+</html>
