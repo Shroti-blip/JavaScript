@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        product  = new Array(3)
+         function func1(){
+            for(i=0; i<3; i++){
+                product[i] = new Array(3)
+                product[i][0] =  prompt("Enter a Product Name: ")
+                product[i][1] =  prompt("Enter a Product Name: ")
+                product[i][2] =  prompt("Enter a Product Name: ")
+            }
+         }
+
+         function func2(){
+          for(i=0;i<3;i++){
+            document.write(product[i][0]+"<br>",product[i][1]+"<br>",product[i][2]+"<br><hr>");
+          }
+         }
+         function func3(){
+          p_code =  prompt("Enter a product number: ",0)
+          for(i=0;i<3;i++){
+            document.getElementById("id1").innerHTML = "<p> Product Code "+ product[i][0] +"</p> product nameName:"+product[i][1]+  +"</p><p>Product Type :"+product[i][2]+"</p><br/>";          
+          }
+         }
+
+         
+    </script>
+</head>
+<body>
+    
+
+    <h1>Produnct Details</h1>
+    <input type="button" value="Add Product" id="bt" onclick="func1()">
+    <input type="button" value="view product" id="bt" onclick="func2()">
+    <input type="button" value="Add_to_cart" id="bt" onclick="func3()">
+
+    <div id="id1"></div>
+</body>
+</html>
