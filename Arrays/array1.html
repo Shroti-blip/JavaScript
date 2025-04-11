@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        function f1(){
+            arr_font = new Array("Arial", "vardana", "Lato", "sans-serif")
+          let   a = new Array(4);
+          let i =0;
+            a[0] = 12;
+            a[1] = "pooja"
+            a[2] = "date"
+            a[3] =true
+
+            document.getElementById('hd1').innerHTML ="<font face ='"+arr_font[i]+"'>"+a + "</font>";
+            i++;
+            if(i == 3)
+              i=0;
+        }
+
+    </script> 
+
+    <input type="button" value = "click" onclick="f1()">
+    <h1 id ="hd1"></h1>
+
+    
+</body>
+</html>
