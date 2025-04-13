@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    document.write("Browser Name: " ,navigator.appName,"<br />")
+    document.write("Browser version: " ,navigator.appVersion,"<br />")
+    document.write("Browser Language: ", navigator.browserLanguage,"<br />")
+    document.write("PlateForm : " ,navigator.platform,"<br />")
+
+    if(navigator.cookieEnabled){
+        document.write("cookie is enabled in the browser")
+    }
+    function f1(){
+        alert("History methods");
+        window.history.back();
+    }
+    function f2(){
+        alert("history methods")
+        window.history.forward();
+    }
+    function f3(){
+        alert("history methods")
+        window.history.go(-2);
+    }
+
+</script>
+
+<h2>Navigator object contains information about a browser 
+    used by the client.</h2>
+<input type="button" value="history back" onclick="f1()">
+<input type="button" value="history forward" onclick="f2()">
+<input type="button" value="history goto" onclick="f3()">
+
+
+<script>
+
+    document.write("protocall name: " , location.protocol,"<br />" )
+    document.write("path name : ", location.pathname,"<br />")
+    document.write("host name: ",location.host,"<br />")
+    document.write("href name: " , location.href ,"<br />")
+
+
+
+</script>
+</body>
+</html>

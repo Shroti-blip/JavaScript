@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="border: solid green 3px;">
+    <p>Text1</p>
+    <p>Text2</p>
+    <div id="div1" style="border: solid rgb(8, 0, 255) 3px">
+        <p>Text3</p>
+        <p>Text4</p>
+        <p>Text5</p>
+        <div id="div2" style="border: solid red 3px">
+            <p>Text6</p>
+            <p>Text7</p>
+        </div>
+    </div>
+    
+    <p>Some outer text</p>
+    <p>Some outer text</p>
+    <input type="button" onclick="getAllElement()" value="show all p elements"  >
+    <input type="button" onclick="div1ParaElement()" value="show all p elements of div1" >
+    <input type="button" onclick="div2ParaElement()" value="show all p elements of div2"  >
+
+    <script>
+         function getAllElement(){
+         let allPara =    document.getElementsByTagName('p');
+         let num = allPara.length;
+         alert("There is total " + num + "para")
+         }
+
+         function div1ParaElement(){
+            let div1 = document.getElementById("div1")
+            let ele = div1.getElementsByTagName('p');
+            let num = ele.length;
+            alert("There is total " + num + "para")
+         }
+
+         function div2ParaElement(){
+            let div2 = document.getElementById("div2")
+            let div2ele = div2.getElementsByTagName('p');
+            let num = div2ele.length;
+            alert("There is total " + num + "para")
+         }
+    </script>
+
+</body>
+</html>

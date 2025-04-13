@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>JavaScript Document Object Methods Example</h1>
+
+    <form action="">
+        <label for=""> Enter your name</label>
+        <input type="text" id="user_name">
+        <br>
+        <input type="button" id="showBtn" value="Click">
+    </form>
+
+    <script>
+        document.getElementById("showBtn").addEventListener('click', () => {
+            let name = document.getElementById("user_name").value;
+          alert("Name is : " + name)
+        });
+
+
+      
+    </script>
+
+
+    <hr>
+    <label for="">First Name : <input type="text" id="n1"></label>
+    <label for="">Middle Name : <input type="text" id="n2"></label>
+    <label for="">Last Name : <input type="text" id="n3"></label>
+    <input type="button" id="btn" value="click on me">
+
+     <script>
+        document.getElementById("btn").addEventListener('click', () => {
+            let n1 = document.getElementById("n1").value;
+            let n2 =   document.getElementById("n2").value;
+            let n3 = document.getElementById("n3").value;
+
+            let length = n1.length + n2.length + n3.length;
+            const newWindow = window.open("")
+            newWindow.document.write("<h3>Length of Your Name is: " +length + "</h3>")
+            newWindow.document.close();
+        })
+     </script>
+
+</body>
+</html>
