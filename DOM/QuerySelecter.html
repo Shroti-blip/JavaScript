@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Query Selector</h1>
+    <p> Highlighting the First Heading on a Page
+        Using querySelector, we can target and modify only the first heading that matches the given selector.
+    </p>
+    <hr>
+
+    <script>
+        let a = document.querySelector('h1');
+        a.style.color = "red"
+    </script>
+
+    <!-- ====================================================================================== -->
+
+    <!-- For only one -->
+    <h1>Query Selector</h1>
+    <ul>
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+        <li>List 4</li>
+    </ul>
+    <p>If we want to select only the first .list-item and change its text color to red:</p>
+    <script>
+        let l = document.querySelector('li')
+        l.style.color = "blue"
+    </script>
+
+
+    <!-- ========================================================================================= -->
+
+    <h1>Query Selector</h1>
+    <ul id="ul">
+        <li id="ul">List 1</li>
+        <li id="ul">List 2</li>
+        <li id="ul">List 3</li>
+        <li id="ul">List 4</li>
+    </ul>
+    <p>This will only change the color of the first .list-item ("Item 1"). If we want to select all .list-item elements
+        and change their text color to blue:</p>
+
+        <script>
+            // let c = document.getElementById('ul')
+            let b = document.querySelectorAll("ul")
+            // b.style.color = "orange"
+            b.forEach(item => item.style.background = "skyblue");
+ 
+ 
+ </script>
+
+</body>
+
+</html>
