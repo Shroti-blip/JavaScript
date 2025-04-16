@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="button" value="Open_or_create_Window" onclick="fun1()">
+<input type="button" value="Close_window" onclick="fun2()">
+<input type="button" value="Resize Window" onclick="myFunc()">
+<input type="button" value="Open myWindow" onclick="openWindow()">
+<input type="button" value="Move_window" onclick="move()">
+<input type="button" value="Load new document" onclick="newDoc()">
+
+<script>
+let z
+    function fun1(){
+         z = window.open("", "", "width=400, height=200")
+    }
+    
+    function fun2(){
+        z.close();
+        z.focus()
+    }
+
+    function newDoc(){
+        window.location.assign("Test.html")
+    }
+    function myFunc(){
+        z.resizeBy(350,100)
+        z.focus();
+    }
+    function openWindow(){
+        z = window.open( "", "", "widht=300, height=200")
+    }
+    function move(){
+        z.moveBy(230,200);
+        z.focus()
+    }
+</script>
+
+
+</body>
+</html>
