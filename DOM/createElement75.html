@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <h1>Creating and Removing Elements</h1>
+    <p>DOM manipulation allows developers to dynamically add or remove elements from a webpage. This is useful for
+        interactive applications such as form handling, to-do lists, dynamic menus, and more.</p>
+    <ol>
+        <li>Creating Elements in the DOM -
+            JavaScript provides the document.createElement() method to create new elements dynamically. These elements
+            can then be customized with text, attributes, styles, or event listeners before being added to the DOM.
+            <ul> Steps to Create an Element:
+                <li>Use document.createElement("tagName") to create a new element.</li>
+                <li>Set properties like textContent or innerHTML.</li>
+                <li>Use appendChild() or insertBefore() to add it to the document.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Adding a new List item.</h2>
+    <ul id="task-list">
+        <li>Task 1</li>
+        <li>Task 2</li>
+    </ul>
+
+    <button onclick="addnewli()">Add new Item</button>
+
+    <script>
+
+        function addnewli() {
+            let create = document.createElement("li");//A tag name as a string
+            create.textContent = "addNew Item"
+            document.getElementById("task-list").appendChild(create)//📝 No quotes are used because create is a reference to an object, not just a name or string
+            //A DOM element object
+        }
+    </script>
+
+<h2>1. Removing Elements from the DOM</h2>
+<ol>We can remove elements using:
+<li>element.remove(); → Directly removes an element.</li>
+<li>parentElement.removeChild(childElement); → Removes a specific child from a parent.</li>
+</ol>
+<p>Removing this Button on Click</p>
+<p id="p_1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis id obcaecati accusantium cupiditate beatae saepe molestiae sequi eum corrupti enim, non magnam deserunt repellendus veritatis. Dolore suscipit fugiat est aspernatur!</p>
+<button onclick="removeme()" id="remove_btn">Remove me</button>
+<button onclick="remobepara()">Remove Para</button>
+<script>
+    function removeme(){
+        document.getElementById("remove_btn").remove();
+
+    }
+
+    function remobepara(){
+        document.getElementById("p_1").remove();
+    }
+</script>
+
+
+
+<h2>2. Deleting a Specific List Item</h2>
+<ul id="task-list1">
+    <li>Task 1 <button onclick="removeTask(this)">Remove</button></li>
+    <li>Task 2 <button onclick="removeTask(this)">Remove</button></li>
+</ul>
+
+<script>
+    function removeTask(button){
+        button.parentElement.remove();
+    }
+</script>
+
+<ul id="task-list2">
+    <li id="task1">Task 1</li>
+    <li id="task2">Task 2</li>
+    <li id="task1">Task 3</li>
+</ul>
+<button onclick="removeTask()">Remove task 2</button>
+
+<script>
+    function removeTask(){
+        let taskList=document.getElementById("task-list2")
+        let tasktoremove = document.getElementById("task2")
+        taskList.removeChild(tasktoremove);
+}
+</script>
+
+
+</body>
+
+</html>
