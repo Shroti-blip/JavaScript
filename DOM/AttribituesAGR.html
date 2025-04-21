@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ol>
+        <li>
+            <ul>
+                <li>setAttribute(attribute,value)->  updaates an attribute.</li>
+                <li>getAttribute(attribute) device-width> retrieves an attribute</li>
+                <li>removeAttribute(attribute) -> removes an aattribute</li>
+            </ul>
+        </li>
+    </ol>
+
+    
+<h2>setAttribute(attribute) - Updating an Image Source Dynamically</h2>
+
+<img src="images/dd.jpg" alt="" id="profile-pic" width="150">
+<button onclick="changeImage()">Change Image</button>
+
+<script>
+    function changeImage(){
+        document.getElementById("profile-pic").setAttribute("src" , "images/img2.jpg");
+
+    }
+</script>
+
+<h2>getAttribute(attribute) -> retrieving an attribute</h2>
+<img src="images/img3.jpg" id="myImg" src="images/img5.jpg" width="200" alt="A beautiful Floweer">
+<button onclick="showAltText()">Show Image Alt Text</button>
+<p id="p1"></p>
+
+<script>
+    function showAltText(){
+        let img = document.getElementById("myImg");
+        let altText = img.getAttribute("alt");
+        document.getElementById("p1").textContent="Alt attribute is" + altText;
+
+    }
+</script>
+
+<h2>RemoveAttribute(attribute) ->Removeing an attribute</h2>
+<input type="text" id="myInput" placeholder="Type something"  disabled>
+<button onclick="enableInput()">Remove</button>
+
+<script>
+    function enableInput(){
+        let inputBox =  document.getElementById("myInput");
+        inputBox.removeAttribute("disabled")
+    }
+</script>
+    
+</body>
+</html>
