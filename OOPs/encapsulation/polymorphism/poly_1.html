@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    class Animal{
+        speak(){
+            console.log("Animal makes a sound")
+        }
+
+    }
+    class Dogs extends Animal{
+        speak(){
+            console.log("Dogs barks")
+        }
+    }
+
+    class Cat extends Animal{
+        speak(){
+            console.log("Cat meows")
+        }
+    }
+
+    let animals = [new Animal(), new Dogs() , new Cat()];
+    animals.forEach(animal => animal.speak());
+
+    
+</script>
+<h1>Polymorphism using Function Behavior on Different Objects</h1>
+<p>JavaScript functions can behave differently depending on the object they are used with.</p>
+
+
+<script>
+    function describeShape(shape){
+        shape.draw();
+    }
+    let circle={
+        draw: function (){
+            console.log("Drawing a circle")
+        }
+    };
+    let squre = {
+        draw:function(){
+            console.log("drawing a squre");
+        }
+    }
+    describeShape(circle);
+    describeShape(squre);
+
+</script>
+<h1>Simulating Method Overloading</h1>
+<p>JavaScript does not support method overloading natively, but we can simulate it using parameters.</p>
+
+<script>  
+    function greet(name , title){
+        if(title){
+            console.log(`hello ${title} ${name}`);
+        }
+        else{console.log(`Helo ${name}`)}
+    }
+
+    greet("amit")
+    greet("amit" , "mreere")
+</script>
+</body>
+</html>
