@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //parent constructor function
+        function Animal(name){
+            this.name=name;
+        }
+        Animal.prototype.sayHello=function(){
+            document.write("hello , i am " + this.name);
+        };
+
+        //child constructor function(inherits from animal)
+
+        function Dog(name, breed){
+            Animal.call(this, name);
+            this.breed = breed;
+        }
+
+        //inherit methods from animal
+        Dog.prototype = Object.create(Animal.prototype);
+        Dog.prototype.constructor=Dog;
+
+        //child class method 
+        Dog.prototype.bark=function(){
+            document.write(this.name+ " says woof");
+        }
+        let dog = new Dog("buddy", "Golden Retriever");
+        dog.sayHello();
+        dog.bark();
+    </script>
+</body>
+</html>
