@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            padding-bottom: 30px;
+            padding-top: 30px;
+            float: left;
+            margin-left:40px;
+        }
+        /* .box .box1:hover{
+            background-color: rgb(163, 49, 49);
+        } */
+    </style>
+</head>
+<body>
+
+    
+    <div>
+        <h1>Two Box</h1>
+        <Button type="submit" id="btn">Submit</Button>
+
+        <div class=" box box1" style="width: 300px; height: 250px; background-color: aqua;"></div>
+
+        <script>
+            let s = document.querySelector(".box1")
+            s.addEventListener("mouseover", function(){
+                s.style.backgroundColor="pink";
+            });
+
+            s.addEventListener("mouseout" , function(){
+                s.style.backgroundColor="red";
+            })
+        </script>
+
+
+        <div class="box box2" style="width: 300px; height: 250px; background-color: rgb(25, 163, 39);"></div>
+        
+        <script>
+            const div2 = document.querySelector(".box2");
+
+            //click event
+            div2.addEventListener("click", function(){
+                alert("Box was Clicked.")
+            });
+
+            //Mouseout event
+
+            div2.addEventListener("mouseout", function(){
+                div2.style.backgroundColor="lightgray";
+            })
+
+            //mouseout event
+            div2.addEventListener("mouseover" , function(){
+                div2.style.backgroundColor="black";
+            })
+
+            //click again with different behavior
+
+            div2.addEventListener("click", function(){
+                console.log("box clicked - logged in console tool")
+            });
+
+        </script>
+
+        
+        <div class="box box3" style="width: 300px; height: 250px; background-color: rgb(30, 9, 149);"></div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>
