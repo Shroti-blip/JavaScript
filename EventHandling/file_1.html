@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:40px;
+        }
+        .form-container{
+            max-width: 400px;
+        }
+        input , button{
+            display: block;
+            margin-bottom: 10px;
+            width:100%;
+            padding:9px;
+        }
+        .output{
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="form-container">
+        <h2>User Info Form</h2>
+        <form onsubmit="return handleForm(this)">
+            <input type="text" name="name" placeholder="Enter your name">
+            <input type="number" name="age" placeholder="Enter your number">
+            <input type="email" name="email" placeholder="Enter your Email" >
+            <button type="submit">submit</button>
+        </form>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        //base class
+        class Person{
+            constructor(name, age){
+                this.name=name;
+                this.age=age;
+            }
+            describe_person(){
+                return `Name: ${this.name}<br>Age: ${this.age}`;
+                //${...} its used inside backticks (`) to insert or embed js expression into a string
+
+            }        }
+
+            class User extends Person{
+                constructor(name , age , email){
+                    super(name , age);
+                    this.email = email;
+                }
+                getDetails(){
+                    return this.describe_person()+`<br>Email: ${this.email}`;
+
+                }
+            }
+            //subclass
+            function handleForm(form){
+               
+                 const   name=form.name.value;
+                 const  age=form.age.value;
+                  const   email=form.email.value;
+
+                    const user = new User(name , age, email);
+
+                    document.getElementById("output").innerHTML=`<strong>User Object created using Inheritance : </Strong><br>
+                        ${user.getDetails()}`;
+
+                        return false;
+                    
+                }
+            
+
+    </script>
+</body>
+</html>
