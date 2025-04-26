@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function student(name , specialisation){
+            this.name=name;
+            this.specialisation= specialisation;
+            this.examine=function(){
+                return this.name + "is examine a Patient."
+            }
+        }
+    </script>
+
+    <script>
+        class person{
+            constructor(name , age, place){
+                this.name=name;
+                this.age=age;
+                this.place = place;
+            }
+        }
+
+        //creating student class object.
+        let s1 = new student("Muskan", 18, "sagar");
+    document.write(s1.name + " is a goofy girl.")
+    </script>
+</body>
+</html>
