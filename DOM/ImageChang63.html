@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+function change_image() {
+      let img_txt = document.getElementById('img1').alt;
+      if (img_txt === "Bear") {
+        document.getElementById('img1').src = "image//img2.jpg";
+        document.getElementById('img1').alt = "Lion";
+        document.getElementById('p1').innerHTML = "This is the Lion - King of the Jungle";
+        document.getElementById('t1').value = "Lion";
+      } else {
+        document.getElementById('img1').src = "image//img3.jpg";
+        document.getElementById('img1').alt = "Bear";
+        document.getElementById('p1').innerHTML = "This is the Great Black Bear";
+        document.getElementById('t1').value = "Black Bear";
+      }
+    }
+
+
+    </script>
+
+
+    <div>
+        <img src="images/img2.jpg" id="img1" alt="Bear">
+        <input type="text" id="t1" readonly value="Bear">
+        <p id="p1">Bear</p>
+        <input type="button" value="NEXT" onclick="change_img()">
+    </div>
+
+<hr>
+    <!--  section 2  -->
+
+    <script>
+        let animals=[
+            {d_alt:"first" , d_text:"Lion King" , animal_src:"images//img2.jpg"},
+            {d_alt:"first" , d_text:"Lion King" , animal_src:"images//img4.jpg"},
+            {d_alt:"first" , d_text:"Lion King" , animal_src:"images//img3.jpg"}
+        ];
+
+        let i=0;
+        function change_img(){
+            document.getElementById('img2').src= animals[i].animal_src;
+            document.getElementById('img2').src = animals[i].animal_src;
+            document.getElementById('p2').innerHTML = animals[i].d_text;
+            document.getElementById('t2').value= animals[i].d_text;
+        }
+
+        i++;
+        if(i>animals.length){
+            i=0;
+        }
+    </script>
+<div>
+    <img src="images/dd.jpg" id="img2" alt="Bear">
+    <input type="text" id="t2" readonly>
+    <p id="p2">Bear</p>
+    <input type="button" value="NEXT" onclick="change_img()">
+</div>
+
+
+</body>
+</html>
