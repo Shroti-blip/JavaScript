@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> Choose the type of music you want: </label>
+    <select  id="music" onchange="f1()">
+        <option value="Bollywood">Bollywood Gana</option>
+        <option value="WEstern">WEstern Music</option>
+        <option value="Tollywood">Tamil Industry</option>
+    </select>
+    
+    <script>
+        function f1(){
+            prefer = document.getElementById("music").value;
+            alert("you prefer " + prefer);
+        }
+    </script>
+
+    <!-- ================================================================================================== -->
+
+    <!-- select event example -->
+
+    <h2>Select Event</h2>
+    <label for="text">Select or write your name</label>
+    <input type="text" onselect="f2()" >
+    <p id="p1"></p>
+
+    <script>
+        function f2(){
+            document.getElementById("p1").innerHTML = "You have Selected that TextField.";
+
+        }
+    </script>
+
+    <!-- ============================================================================================================ -->
+
+    <h1>Submit Event Example</h1>
+    <form onsubmit="return f4()">
+        <label for="sub">Enter</label>
+        <input type="text" id="sub">
+        <input type="submit" value="okkk">
+    </form>
+    <!-- 
+    
+    The onsubmit attribute doesn't work on <input type="text">. It should be placed on a <form> element.
+
+You're missing a <form> tag to wrap the input elements, which is necessary for using onsubmit.
+    
+    -->
+    <script>
+        function f4() {
+            var uname = document.getElementById("sub").value;
+            alert("Hello " + uname + " ! Welcome to our website");
+            return false; // Prevents the form from submitting and reloading the page
+        }
+    </script>
+
+    <!-- =========================================================================================================== -->
+
+    <!-- Key event Down -->
+
+    <h2>Key Down Event</h2>
+    <p>Press any key in the input field below</p>
+    <input type="text" onkeydown="f6()">
+    <hr>
+
+    <script>
+        function f6(){
+            alert("you pressed a key inside the input field")
+        }
+    </script>
+
+    <!-- ===================================================================================================================== -->
+
+    <!-- Moves over and Moves Out -->
+
+    <h2>Mouse Events</h2>
+    <script>
+        function f7(){
+            alert("Mouse Over")
+        }
+        function f8(){
+            alert("Mouse Out")
+        }
+
+    </script>
+
+    <p>Bring mouse Inside and then take it outside</p>
+    <div onmouseover="f7()" onmouseout="f8()" style="padding:10px; border:1px solid black;">
+        <h3>This is inside a division</h3>
+    </div>
+
+
+    <!-- ==================================================================== -->
+
+    <!-- key up + Dynamic background color -->
+
+    <input type="text" id="bg" onkeyup="f9()" placeholder="write down Something...">
+
+    <script>
+        let a =0 , b =0 , c=0;
+        function f9(){
+            x = document.getElementById('bg');
+            x.style.backgroundColor = 'rgb('+a +','+b
+    +','+c+')';
+   a +=1;
+    b += a+1;
+    c += b+1;
+    if(a>255) a=0;
+    if(b>255) b=0
+    if(c>255) c=0
+        }
+    </script>
+
+    <!-- ====================================== -->
+
+    <!-- MouseOver To Hide -->
+
+    <div id="hover_me" onmouseover="f11()" style="background-color: aqua; height:200px; width:200px;"></div>
+    <script>
+        function f11(){
+            document.getElementById('hover_me').style.display='none';
+        }
+    </script>
+</body>
+</html>
