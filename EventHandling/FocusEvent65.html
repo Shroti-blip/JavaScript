@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>Focus Events.</h1>
+
+    <label for="">Enter User Name: </label>
+    <input type="text" name="uname" id="uname" onfocus="f1(this)">
+
+    <script>
+        function f1(x){
+            x.style.background ="yellow";
+        }
+    </script>
+
+    <label for="">Enter Password: </label>
+    <input type="text" name="pass" id="pass" onfocus="f2()">
+
+    <script>
+        function f2(){
+            document.getElementById("pass").style.background="red";
+        }
+    </script>
+
+    <!--script>
+        function f1(){
+            document.getElementById("uname").style.background="yellow";
+        }
+    </script-->
+</body>
+</html>
