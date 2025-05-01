@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>Blur Events</h1>
+
+    <label for="">Enter Something</label>
+    <input type="text" onblur="f1(this)"><br>
+    <label for="">Enter Something</label>
+    <input type="text" onblur="f2(this)">
+    
+    <script>
+        function f1(x){
+            x.value = x.value.toUpperCase();
+        }
+
+        function f2(y){
+           y.value = y.value.toLowerCase();
+        }
+    </script>
+</body>
+</html>
